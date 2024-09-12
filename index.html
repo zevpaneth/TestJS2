@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <title>BATTALION FORCE MANAGEMENT</title>
+</head>
+<body>
+<section id="home">
+  <h1>BATTALION FORCE MANAGEMENT</h1>
+  <form id="createSoldierForm">
+    <label for="inputFullName"></label>
+    <input id="inputFullName" placeholder="Full Name">
+    <label for="inputRank"></label>
+    <input id="inputRank" placeholder="Rank">
+    <label for="inputPosition"></label>
+    <input id="inputPosition" placeholder="Position">
+    <label for="inputPlatoon"></label>
+    <input id="inputPlatoon" placeholder="Platoon">
+    <label for="inputMissionTime"></label>
+    <input id="inputMissionTime" placeholder="Mission Time (seconds)">
+    <label for="inputStatus"></label>
+    <select id="inputStatus">
+      <option>Active</option>
+      <option>Reserve</option>
+      <option>Retired</option>
+    </select>
+    <button type="submit" id="submitBtn">Add Personnel</button>
+  </form>
+  <div>
+    <h1>FORCES OVERVIEW</h1>
+    <table border="1" id="table">
+      <thead>
+      <tr>
+        <th><button type="button" onclick="sortTable(0, 'table')">Full Name</button></th>
+        <th>Rank</th>
+        <th>Position</th>
+        <th>Platoon</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="edit" style="display: none;">
+  <h1>EDIT PERSONNEL</h1>
+  <form id="editSoldierForm">
+    <label for="editFullName"></label>
+    <input id="editFullName" placeholder="Full Name">
+    <label for="editRank"></label>
+    <input id="editRank" placeholder="Rank">
+    <label for="editPosition"></label>
+    <input id="editPosition" placeholder="Position">
+    <label for="editPlatoon"></label>
+    <input id="editPlatoon" placeholder="Platoon">
+    <label for="editMissionTime"></label>
+    <input id="editMissionTime" placeholder="Mission Time (seconds)">
+    <label for="editStatus"></label>
+    <select id="editStatus">
+      <option>Active</option>
+      <option>Reserve</option>
+      <option>Retired</option>
+    </select>
+    <button type="submit" id="saveBtn">Save Changes</button>
+    <button type="button" id="cancelBtn">Cancel</button>
+  </form>
+</section>
+
+<script src="index.js"></script>
+</body>
+</html>
