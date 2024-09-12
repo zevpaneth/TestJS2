@@ -20,7 +20,7 @@ function Mission5(keyArr, valueArr){
         }
         return obj;
     }
-    return {"the arrays are": "not even"}
+    return {"errorCommand": "the arrays are not even"}
 }
 
 module.exports = {
